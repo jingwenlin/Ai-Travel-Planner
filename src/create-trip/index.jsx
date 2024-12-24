@@ -16,8 +16,9 @@ import { FcGoogle } from "react-icons/fc";
 import { useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 import { doc, setDoc } from 'firebase/firestore';
-import { db } from '@/service/firbaseConfig';
+import { db } from '@/service/firebaseConfig';
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { useNavigate } from 'react-router-dom';
 
 
 function CreateTrip() {
@@ -25,6 +26,7 @@ function CreateTrip() {
   const [formData, setFormData] = useState({});
   const [openDailog, setOpenDailog] = useState(false);
 
+  const navigate=useNavigate();
   const [loading, setLoading] = useState(false);
  
 
@@ -109,6 +111,7 @@ function CreateTrip() {
       id:docId
     });
     setLoading(false);
+    navigate('/view-trip/'+docId);
   };  
 
   return (
