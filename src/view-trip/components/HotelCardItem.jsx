@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function HotelCardItem({hotel}) {
-    const [photoUrl,setPhotoUrl]=useState();
+  const [photoUrl,setPhotoUrl]=useState();
   useEffect(()=>{
     hotel&&GetPlacePhoto();
   },[hotel])
