@@ -18,9 +18,7 @@ function Hero() {
       <Button>Get Started, It's Free</Button>
       </Link>
 
-      {/* <img src='/landing.png' className='-mt-20'/> */}
-
-      <img src='/DALL·E 2024-12-24 16.48.12 - A realistic user interface displayed on a laptop screen showcasing a trip planning platform for Vancouver, BC, Canada. The interface includes a main b.webp.png' className='-mt-20'/>
+      <img src='/landing.png' className='-mt-20'/>
     </div>
   )
 }
